@@ -1,2 +1,2 @@
-# boxagon.github.io
+# Boxagon 
 Curated version of the original Boxagon social commerce site.
