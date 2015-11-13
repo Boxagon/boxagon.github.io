@@ -1,0 +1,507 @@
+/**
+ * The CSS here overrides default Bootstrap CSS.
+ * @author juancarlosfarah
+ *
+ */
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+textarea {
+	resize: none;
+}
+
+@media (min-width: 768px) {
+  .form-horizontal .control-label {
+    text-align: left;
+  }
+}
+
+.form-horizontal .control-label {
+  padding-top: 4px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+select {
+	background: #827d96;
+	border: none;
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-size: 18px;
+	color: #fff;
+	height: 35px;
+	padding: 1%;
+	text-indent: 2.5%;
+	vertical-align: middle;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+/*
+ * NAV TABS
+ * ========
+ * Overriding:
+ * (1) Color of border under tabs.
+ * (2) Color of tab on hover.
+ * (3) Color and border of active tab.
+ */
+
+/* (1) Color of border under tabs. */
+.nav-tabs {
+    border-bottom: 0;
+}
+
+/* (2) Color of tab on hover. */
+.nav-tabs > li > a:hover {
+    border-color: #61597c #61597c #61597c;
+}
+
+/* (3) Color and border of active tab. */
+.nav-tabs > li.active > a,
+.nav-tabs > li.active > a:hover,
+.nav-tabs > li.active > a:focus {
+    border: 1px solid #fff;
+    border-bottom: 3px solid #1498C3;       /* Overrides border for the bottom border. */
+    color: #1498C3;
+   /* color: #fff;
+    cursor: default;
+    background-color: #473f65;
+    border: 1px solid #473f65;
+    border-bottom-color: transparent;  */
+}
+
+
+/* 
+ * DROPDOWN
+ * ======== 
+ * Overriding:
+ * (1) Position and alignment of dropdown to fit our board.
+ * (2) Allowing disabled > a color to propagate to all descendants.
+ * (3) Allowing various properties of disabled > a:hover and :focus to propagate to all descendants.
+ * (4) Allowing active > a to propagate to all descendants. and changing background color.
+ * (5) Allowing li > a:hover and :focus to propagate to all descendants. and changing background color.
+ */
+
+/* (1) Position and alignment of dropdown to fit our board. */
+.dropdown-menu {
+	right: 0;
+	left: auto;
+	text-align: left;
+}
+
+/* (2) Allowing disabled > a color to propagate to all descendants. */
+.dropdown-menu .disabled > a,
+.dropdown-menu .disabled > a:hover,
+.dropdown-menu .disabled > a:focus {
+  color: #999999;
+}
+
+/* (3) Allowing various properties of disabled > a:hover and :focus to propagate to all descendants. */
+.dropdown-menu .disabled > a:hover,
+.dropdown-menu .disabled > a:focus {
+  text-decoration: none;
+  cursor: not-allowed;
+  background-color: transparent;
+  background-image: none;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+/* (4) Allowing active > a to propagate to all descendants. and changing background color. */
+.dropdown-menu .active > a,
+.dropdown-menu .active > a:hover,
+.dropdown-menu .active > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #39bced;
+  outline: 0;
+}
+
+/* (5) Allowing li > a:hover and :focus to propagate to all descendants. and changing background color. */
+.dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #473f65;
+}
+
+.bxg-assign-item-profile ul {
+	width: 100%;
+	padding: 0;
+	font-size: 18px;
+}
+
+input[type='checkbox'] {
+    vertical-align: bottom; /*regular is vertical align top*/
+}
+
+/*
+ * CAROUSEL
+ * ========
+ * Overriding:
+ * (1) Text alignment and easing to fit our use.
+ * (2) Displaying elements inline and capping height to the size of the related collection boxes.
+ * (3) Vertically aligning and styling the carousel controls manually.
+ * (4) Changing background colour of carousel control left.
+ * (5) Changing background colour of carousel control right.
+ * (6) Changing the carousel control on hover and focus styling.
+ */
+
+/* (1) Text alignment and easing to fit our use. */
+.carousel-inner > .item {
+	text-align: center;
+	-webkit-transition: .3s ease-in-out left;
+	transition: .3s ease-in-out left;
+}
+
+/* (2) Displaying elements inline and capping height to the size of the related collection boxes. */
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	display: inline;
+	height: 240px;
+}
+
+/* (3) Vertically aligning and styling the carousel controls manually. */
+.carousel-control {
+    top: 70px; /* Height of container is 180. So we do (180 - 40) / 2 = 70 */
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    border-radius: 20px;
+    left: 0;
+    font-size: 30px;
+    color: #000;
+    text-align: center;
+    text-shadow: none;
+}
+
+/* (4) Changing background colour of carousel control left. */
+.carousel-control.left {
+  background: #FFF;
+}
+
+/* (5) Changing background colour of carousel control right. */
+.carousel-control.right {
+  background: #FFF;
+}
+
+/* (6) Changing the carousel control on hover and focus styling. */
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #000;
+  text-decoration: none;
+}
+
+.carousel-indicators {
+    bottom: -40px;
+}
+
+/* FORMS
+ * =====
+ * (1) Overriding where feedback icon goes on the form.
+ */
+
+/** (1) Overriding where feedback icon goes on the form. **/
+.has-feedback.bxg-feedback-bottom .form-control-feedback {
+    top: auto;
+    bottom: 0;
+    right: 0;
+}
+
+
+
+/* CODE
+ * ====
+ * Overriding:
+ * (1) Override how <code> element looks inline. Affects color and background color.
+ */
+
+/* (1) Override how <code> element looks inline. Affects color and background color.
+ * Original Values:
+ *      color: #c7254e;
+ *      background-color: #f9f2f4;
+ */
+
+code {
+    color: #ffffff;
+    background-color: #39bced;
+}
+
+
+/* FONT SIZES
+ * ==========
+ * Overriding:
+ * (1) Override the sizes and line heights for h1-h6 elements and classes.
+ */
+
+/* Fix line height to accommodate ellipsis and overflow hidden. */
+h1 {
+    line-height: 42px;
+}
+
+h2 {
+    line-height: 38px;
+}
+
+h3 {
+    line-height: 28px;
+}
+
+h4 {
+    line-height: 24px;
+}
+
+h5 {
+    line-height: 16px;
+}
+
+h6 {
+    line-height: 12px;
+}
+
+/* Regular is margin-top 20px and margin-bottom 10px */
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 10px;
+}
+
+/* Regular is margin-top and margin-bottom 10px */
+h5,
+h6 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+h1,
+.h1 {
+  font-size: 32px;
+}
+
+h2,
+.h2 {
+  font-size: 28px;
+}
+
+h3,
+.h3 {
+  font-size: 22px;
+}
+
+h4,
+.h4 {
+  font-size: 18px;
+}
+
+h5,
+.h5 {
+  font-size: 14px;
+}
+
+h6,
+.h6 {
+  font-size: 12px;
+}
+
+h1 small,
+.h1 small {
+  font-size: 24px;
+}
+
+h2 small,
+.h2 small {
+  font-size: 18px;
+}
+
+h3 small,
+.h3 small,
+h4 small,
+.h4 small {
+  font-size: 14px;
+}
+
+
+/**/
+ /** MODAL*/
+ /** ========*/
+ /** Overriding:*/
+ /** (1) Width of modal in md and lg screen, it is auto in sm and xs*/
+ /** (2) Padding of modal, 20px is very big and unnecessary*/
+ /** (3) Border radius of modal*/
+ /** (4) Styling of modal header*/
+ /** (5) New empty modal header class*/
+ /**/
+
+/* (1) Regular is 600px */
+/*@media (min-width: 768px) {*/
+    /*.modal-dialog {*/
+        /*width: 500px;*/
+    /*}*/
+/*}*/
+
+/* (2) Regular is 10px */
+/*.modal-body {*/
+    /*padding: 10px;*/
+/*}*/
+
+/* (3) Regular is 6px */
+/*.modal-content {*/
+    /*border-radius: 0;*/
+/*}*/
+
+/* (4) Regular is white background with text left. */
+.modal-header {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    background-color: #F2F2F2;
+    text-align: center;
+}
+/* (5) New empty modal header class. */
+.modal-header.empty {
+    background-color: #fff;
+    border-bottom: none;
+}
+
+
+/* NAVBAR
+ * ======
+ * Overriding:
+ * (1) Override the margin-bottom, color and border-radius of the navbar class.
+ * (2) Override the colors of the navbar-default class.
+ */
+
+/* (1) Override the margin-bottom, color and border-radius of the navbar class. */
+.navbar {
+    margin-bottom: 0;
+    border: 1px solid #473f65;
+}
+@media (min-width: 768px) {
+    .navbar {
+        border-radius: 0;
+    }
+}
+
+/* (2) Override the colors of the navbar-default class when a child of .bxg-header-purple. */
+.bxg-header-purple > .navbar-default {
+    background-color: #473f65;
+    border-color: #473f65;
+}
+.bxg-header-purple > .navbar-default .navbar-brand {
+    color: #fff;
+}
+.bxg-header-purple >.navbar-default .navbar-brand:hover,
+.bxg-header-purple > .navbar-default .navbar-brand:focus {
+    color: #fff;
+    background-color: #61597c;
+}
+.bxg-header-purple > .navbar-default .navbar-text {
+    color: #fff;
+}
+.bxg-header-purple > .navbar-default .navbar-nav > li > a {
+    color: #fff;
+}
+.bxg-header-purple > .navbar-default .navbar-nav > li > a:hover,
+.bxg-header-purple > .navbar-default .navbar-nav > li > a:focus {
+    color: #fff;
+    background-color: #61597c;
+}
+.bxg-header-purple > .navbar-default .navbar-nav > .active > a,
+.bxg-header-purple > .navbar-default .navbar-nav > .active > a:hover,
+.bxg-header-purple > .navbar-default .navbar-nav > .active > a:focus {
+    color: #fff;
+    background-color: #61597c;
+}
+.bxg-header-purple > .navbar-default .navbar-nav > .disabled > a,
+.bxg-header-purple > .navbar-default .navbar-nav > .disabled > a:hover,
+.bxg-header-purple > .navbar-default .navbar-nav > .disabled > a:focus {
+    color: #fff;
+    background-color: #61597c;
+}
+.bxg-header-purple > .navbar-default .navbar-toggle {
+    border-color: #fff;
+}
+.bxg-header-purple > .navbar-default .navbar-toggle:hover,
+.bxg-header-purple > .navbar-default .navbar-toggle:focus {
+    background-color: #61597c;
+}
+.bxg-header-purple > .navbar-default .navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+.bxg-header-purple > .navbar-default .navbar-collapse,
+.bxg-header-purple > .navbar-default .navbar-form {
+    border-color: #fff;
+}
+.bxg-header-purple > .navbar-default .navbar-nav > .open > a,
+.bxg-header-purple > .navbar-default .navbar-nav > .open > a:hover,
+.bxg-header-purple > .navbar-default .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #61597c;
+}
+@media (max-width: 767px) {
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+        color: #fff;
+    }
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #fff;
+        background-color: #61597c;
+    }
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > .active > a,
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
+        color: #fff;
+        background-color: #61597c;
+    }
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a,
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover,
+    .bxg-header-purple > .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
+        color: #fff;
+        background-color: #61597c;
+    }
+}
+.bxg-header-purple > .navbar-default .navbar-link {
+    color: #fff;
+}
+.bxg-header-purple > .navbar-default .navbar-link:hover {
+    color: #fff;
+}
+
+
+/* PAGINATION
+ * ==========
+ * Overriding:
+ * (1)  Make cursor pointer when hovering over pagination links but
+ *      don't do it if the link is focused or disabled. The default
+ *      is that the cursor is auto except for disabled or focused.
+ */
+
+/* (1)  Make cursor pointer when hovering over pagination links but
+ *      don't do it if the link is focused or disabled. The default
+ *      is that the cursor is auto except for disabled or focused.
+ */
+.pagination > li > a:hover,
+.pagination > li > span:hover {
+    cursor: pointer;
+}
+.pagination > li:first-child > a:hover,
+.pagination > li:first-child > span:hover {
+    cursor: pointer;
+}
+.pagination > li:last-child > a,
+.pagination > li:last-child > span {
+    cursor: pointer;
+}
+.pagination > .active > a,
+.pagination > .active > span {
+    cursor: default;
+}
+.pagination > .disabled > span,
+.pagination > .disabled > span:hover,
+.pagination > .disabled > span:focus,
+.pagination > .disabled > a,
+.pagination > .disabled > a:hover,
+.pagination > .disabled > a:focus {
+    cursor: not-allowed !important;
+}

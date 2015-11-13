@@ -1,0 +1,12 @@
+{
+  "name": "boxagon",
+  "dependencies": {
+    "jquery": "^2.1.4",
+    "bootstrap": "^3.3.5",
+    "masonry": "~3.3.2",
+    "imagesloaded": "~3.1.8",
+    "magnific-popup": "~1.0.0",
+    "lodash": "~3.10.1",
+    "components-font-awesome": "~4.4.0"
+  }
+}
